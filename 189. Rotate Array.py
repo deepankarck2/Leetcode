@@ -8,13 +8,19 @@
 def sol1(nums,k):
     length = len(nums)
     k = k%length
-    
+
     num2 = [None]*length
     
     for i in range(0,length):
         num2[(i+k)%length] = nums[i]
     
     nums[:] = list(num2)
+
+def sol2(nums, k):
+    pass
+
+#$ TODO $: Do the O(1) space complexity solution 
+
 
 nums = [-1,-100,3,99]
 k = 2
