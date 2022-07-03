@@ -8,10 +8,11 @@ def sol(x):
         x = abs(x)
 
     while(abs(x) > 0):
+        if(abs(y) > 2**31/10):
+            return 0 
         y = (y*10) + (x % 10)
         x = x//10
-        if(abs(y) > 2**31):
-            return 0 
+        
 
     return y if not sin else -y
 
