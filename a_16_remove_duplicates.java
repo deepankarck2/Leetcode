@@ -1,4 +1,4 @@
-public class remove_duplicates_16 {
+public class a_16_remove_duplicates{
   
     public static int removeDuplicates(int[] nums) {
         

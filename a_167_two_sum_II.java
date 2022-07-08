@@ -1,4 +1,4 @@
-public class two_sum_II_167{
+public class a_167_two_sum_II{
     public int[] twoSum(int[] numbers, int target) {
         int low =0; 
         int high = numbers.length-1;
@@ -23,7 +23,7 @@ public class two_sum_II_167{
     public static void main(String[] args) {
         int [] numbers = {-1,0};
         int target = -1; 
-        int[] ans = new two_sum_II_167().twoSum(numbers, target);
+        int[] ans = new a_167_two_sum_II().twoSum(numbers, target);
 
        for(int i: ans){
         System.out.println(i);
