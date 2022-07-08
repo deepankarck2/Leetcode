@@ -2,7 +2,7 @@
 import java.util.HashMap;
 import java.util.ArrayList;
 
-public class 2_sum
+public class two_sum
 {
 	public static void main(String[] args) {
 	    int[] nums = {2,7,11,15}; 
