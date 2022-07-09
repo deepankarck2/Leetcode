@@ -1,4 +1,3 @@
-import java.util.*;
 public class a_53_maximum_subarray {
     public static void main(String[] args) {
         int nums[] = {5,4,-1,7,8};
