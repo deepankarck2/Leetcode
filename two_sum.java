@@ -10,7 +10,6 @@ public class two_sum
        
         HashMap<Integer,Integer> num_hash = new HashMap<Integer,Integer>();
         ArrayList<Integer> answer = new ArrayList<Integer>(); 
-        int counter = 0;
         
         for(int i=0; i<nums.length; i++){
             int diff = target - nums[i];
