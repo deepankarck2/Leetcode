@@ -1,7 +1,3 @@
-
-from traceback import print_tb
-
-
 def findClosestValueInBst(tree, target):
     min_val = tree.value
     closest = None 

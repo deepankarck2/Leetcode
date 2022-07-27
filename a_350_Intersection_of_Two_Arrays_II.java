@@ -1,11 +1,14 @@
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class a_350_Intersection_of_Two_Arrays_II{
     public static int[] intersect(int[] nums1, int[] nums2) {
-        ArrayList<Integer> answer = new ArrayList<>(); 
+        //ArrayList<Integer> answer = new ArrayList<>(); 
 
+        int p[] = new int[4];
+
+        return p;
         
-        return answer; 
+       
     }
     public static void main(String[] args) {
         int nums1[] = {4,9,5};
