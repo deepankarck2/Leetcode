@@ -1,6 +1,27 @@
+from logging import root
+
+list1 = [] 
+def inorder(tree, target, closest, min_val):
+    
+    if(tree != None):
+        inorder(tree.left, target, closest, min_val)
+        if(abs(tree.value-target) < min_val):
+            closest = tree.value
+            list1.append(tree.value) 
+            min_val = abs(tree.value-target)
+        inorder(tree.right, target, closest, min_val)
+            
+
+def findClosestValueInBst1(tree, target):
+    closest = tree.value
+    min_val = abs(tree.value-target)
+    inorder(tree, target, closest, min_val)
+
+
 def findClosestValueInBst(tree, target):
-    min_val = tree.value
-    closest = None 
+    min_val = float('inf')  
+    closest = tree.value
+    
     while(tree != None):
         if(target <= tree.value):
             if(abs(target-tree.value) < min_val):

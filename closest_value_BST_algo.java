@@ -12,7 +12,28 @@ public class closest_value_BST_algo {
 
     public static int findClosestValueInBst(BST tree, int target) {
         // Write your code here.
-        return -1;
+        int closest_node = tree.value;
+        double min_val = Double.POSITIVE_INFINITY;
+        
+        while(tree != null){
+          if(target <= tree.value){
+            if(Math.abs(tree.value - target) < min_val){
+              min_val = Math.abs(tree.value - target); 
+              closest_node = tree.value;
+            }
+            tree = tree.left;
+            //left
+          }
+          else if(target > tree.value){
+            if(Math.abs(tree.value - target) < min_val){
+              min_val = Math.abs(tree.value - target);
+              closest_node = tree.value;
+            }
+            tree = tree.right; 
+          }
+        }
+
+        return closest_node;
     }
 
     public static void main(String[] args) {
@@ -26,7 +47,8 @@ public class closest_value_BST_algo {
         root.right.left.right = new closest_value_BST_algo.BST(14);
         root.right.right = new closest_value_BST_algo.BST(22);
 
-        var expected = 13;
+       // var expected = 13;
         var actual = closest_value_BST_algo.findClosestValueInBst(root, 12);
+        System.out.println(actual);
     }
 }
