@@ -1,20 +1,20 @@
 from logging import root
 
-list1 = [] 
 def inorder(tree, target, closest, min_val):
     
-    if(tree != None):
-        inorder(tree.left, target, closest, min_val)
-        if(abs(tree.value-target) < min_val):
+    if(tree == None):
+        return closest; 
+
+    inorder(tree.left, target, closest, min_val)
+    if(abs(tree.value-target) < min_val):
             closest = tree.value
-            list1.append(tree.value) 
             min_val = abs(tree.value-target)
-        inorder(tree.right, target, closest, min_val)
+    inorder(tree.right, target, closest, min_val)
             
 
 def findClosestValueInBst1(tree, target):
     closest = tree.value
-    min_val = abs(tree.value-target)
+    min_val = float('inf')
     inorder(tree, target, closest, min_val)
 
 
@@ -57,6 +57,7 @@ def main():
         expected = 13
         target = 12
         print(findClosestValueInBst(root,target))
+        print(findClosestValueInBst1(root,target))
 
 if __name__ == '__main__':
     main()
