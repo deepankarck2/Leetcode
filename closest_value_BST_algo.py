@@ -1,4 +1,6 @@
-from logging import root
+# Average: time: O(long(n)) | Space: O(1) --> Since Iterative
+# Wrost : time: O(N), a straight branch| space: O(1) --> since iterative
+
 
 def inorder(tree, target, closest, min_val):
     
