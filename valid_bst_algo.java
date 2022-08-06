@@ -5,21 +5,17 @@ public class valid_bst_algo {
     }
 
     public static boolean validateBstHelper(BST root, int min, int max){
-        boolean leftValid = true; 
-        boolean rightValid= true; 
-
-        if(root != null){
 
         if(root.value < min || root.value >= max) return false;
-        
-        leftValid = validateBstHelper(root.left, min, root.value);
-        rightValid = validateBstHelper(root, root.value, max);
+        if(root.left!= null && !validateBstHelper(root.left, min, root.value)){
+            return false;
         }
 
-        return leftValid && rightValid;
+        if(root.right != null && !validateBstHelper(root.right, root.value, max)){
+            return false;
+        }
+        return true;
     }
-
-
 
     static boolean answer = true;
     static boolean answer1 = true;
@@ -62,6 +58,6 @@ public class valid_bst_algo {
         root.right.left.right = new valid_bst_algo.BST(14);
         root.right.right = new valid_bst_algo.BST(22);
 
-        System.out.println( valid_bst_algo.validateBst(root));
+        System.out.println( valid_bst_algo.validateBst1(root));
     }
 }
