@@ -6,23 +6,48 @@ public class bst_construction {
 
         public BST(int value){
             this.value = value; 
+            this.left = null;
+            this.right = null;
         }
         
         public BST insert(int value){
-            if(this == null){
-                var node = bst_construction.BST(value);
-                return node;
+            BST currentNode = this; 
+
+            if(value < currentNode.value){
+                if(left == null){
+                    BST newNode = new BST(value);
+                    left = newNode;
+                }
+                else{
+                    left.insert(value);
+                }    
             }
-            else if(value < this.value){
-                this.left = this.left.insert(value);
-            }
-            else if(value > this.value){
-                this.right = this.right.insert(value);
+            else if(value > currentNode.value){
+                
+                if(right == null){
+                    BST newNode = new BST(value);
+                    right = newNode;
+                }
+                else{
+                    right.insert(value);
+                }
             }
             return this; 
         }
 
         public boolean contains(int value){
+            BST currentNode = this;  
+            while(currentNode != null){
+                if(currentNode.value == value){
+                    return true;
+                }
+                else if(currentNode.value < value){
+                    currentNode = currentNode.right;
+                }
+                else{
+                    currentNode = currentNode.right;
+                }
+            }
             return false;
         }
 
@@ -41,11 +66,11 @@ public class bst_construction {
         root.right.left = new bst_construction.BST(13);
         root.right.left.right = new bst_construction.BST(14);
         root.right.right = new bst_construction.BST(22);
-        
+
         root.insert(12); 
         System.out.println("Insert: " + root.right.left.left.value);
         
-        System.out.println("Contains: 15" + root.contains(15));
+        System.out.println("Contains: 15  " + root.contains(15));
     }
     public static bst_construction.BST BST(int value) {
         return null;
