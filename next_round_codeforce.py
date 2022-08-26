@@ -1,8 +1,8 @@
 # https://codeforces.com/problemset/problem/158/A
 
-n, k = input().split()
+n, k = input().split() #how to take multiple input 
      
-list1 = list(map(int, input().split()))
+list1 = list(map(int, input().split()))  #Multiple input as a list
      
 counter = 0 
 beat = list1[int(k)-1]
