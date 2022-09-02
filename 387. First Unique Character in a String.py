@@ -1,5 +1,8 @@
 #https://leetcode.com/problems/first-unique-character-in-a-string/
 
+# Time: O(n)
+# Space: O(1) --> there will be only 26 possible values in the dict.
+
 from pprint import pprint
 from turtle import width
 
