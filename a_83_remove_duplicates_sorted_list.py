@@ -25,9 +25,8 @@ head = ListNode(1)
 head.next = ListNode(1)
 head.next.next = ListNode(2)
 
-
-
 new_head = deleteDuplicates(head)
+#head = deleteDuplicates*head.next 
 
 while new_head is not None:
     print(new_head.val)
