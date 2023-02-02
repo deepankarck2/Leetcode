@@ -1,18 +1,18 @@
 class ListNode:
-     def __init__(self, val=0, next=None):
-         self.val = val
-         self.next = next
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
 
 def reverseList(head):
     new_head = None
-    while(head != None):
+    while (head != None):
         tmp = head.next
         head.next = new_head
         new_head = head
         head = tmp
-        
-    return new_head            
 
+    return new_head
 
 
 head = ListNode(1)
